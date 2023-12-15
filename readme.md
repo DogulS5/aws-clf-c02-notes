@@ -1,14 +1,14 @@
 # Intro to AWS Web Services
 ## Intro 
-- Amazon Elastic Compute Cloud (Amazon EC2) : It the server side of a client/server application, a type of virtual server.
+- Amazon Elastic Compute Cloud (Amazon EC2): It is the server side of a client/server application, a type of virtual server.
 - Pay for what you need
 
 ## Cloud computing
-- The on demand delivery (resources that a customer needs) of IT resrouces over the internet with pay as you go princing (pay based on the necessity)
+- The on-demand delivery (resources that a customer needs) of IT resources over the Internet with pay as you go pricing (pay based on necessity)
 
 # Compute in the cloud
 ## Intro
-- Multitenancy: Sharing underlying hardware between virtual machines. Hypervisor manager multitenancies which is manage by AWS
+- Multitenancy: Sharing underlying hardware between virtual machines. Hypervisor manager multi tenancies which is manage by AWS
 
 ## Amazon EC2:
 - Handle: 
@@ -18,18 +18,18 @@
   - Network
 - Each Amazon EC2 instance type is grouped under an instance family
 - Type:
-  - General purpose: General purpose instances provide a balance of compute, memory, and networking resources.
-  - Memory optimized: Memory optimized instances are more ideal for workloads that process large datasets in memory, such as high-performance databases
-  - Compute optimzed: Compute optimized instances are more well suited for batch processing workloads than general purpose instances.
-  - Storage optimized: Storage optimized instances are designed for workloads that require high, sequential read and write access to large datasets on local storage.
+  - General purpose: General purpose instances provide a balance of computing, memory, and networking resources.
+  - Memory-optimized: Memory-optimized instances are ideal for workloads that process large datasets in memory, such as high-performance databases
+  - Compute optimized: Compute-optimized instances are better suited for batch processing workloads than general-purpose instances.
+  - Storage optimized: Storage instances are designed for workloads requiring high, sequential read and write access to large datasets on local storage.
 - Contract types:
-  - Amazon EC2 Reserved instance: Amazon EC2 Reserved Instances (RI) provide a significant discount (up to 72%) compared to On-Demand pricing and provide a capacity reservation when used in a specific Availability Zone.
-  - Amazon EC2 On-Demand: Let you pay for compute capacity by the hour or second with no long-term commitments.
+  - Amazon EC2 Reserved instance: Amazon EC2 Reserved Instances (RI) provide a significant discount (up to 72%) compared to On-Demand pricing and a capacity reservation when used in a specific Availability Zone.
+  - Amazon EC2 On-Demand: Let you pay for computing capacity by the hour or second with no long-term commitments.
   - Amazon EC2 Sopt Instance: Workload does not require a minimum contract length and can withstand interruptions.
   - Amazon EC2 Dedicated Instance: Run in a virtual private cloud (VPC) on hardware that is dedicated to a single customer.
 
 ## Elastic Load Balance
-- Elastic Load Balancing is the AWS service that automatically distributes incoming application traffic across multiple resources, such as Amazon EC2 instances. Without it, the team needs install, manage, update, scale, handle fail over and availability.
+- Elastic Load Balancing is the AWS service that automatically distributes incoming application traffic across multiple resources, such as Amazon EC2 instances. Without it, the team needs install, manage, update, scale, handle failover, and availability.
 
 ## Auto Scaling
 - Amazon EC2 Auto Scaling helps you maintain application availability and lets you automatically add or remove EC2 instances using scaling policies that you define.
@@ -41,10 +41,10 @@
 - Handle message as a queue
 
 ## Amazon Simple Notification Service (Amazon SNS)
-- Handle messas as topic
+- Handle messages as topic
 
 ## Amazon Elastic Container Service (ECS)
-- It's a highly scalable, high performance container (Docker) management system.
+- It's a highly scalable, high-performance container (Docker) management system.
 
 ## Amazon Elastic Kubernetes Service (EKS)
 - It's a fully managed service that you can use to run K8s on AWS.
@@ -53,12 +53,12 @@
 - Serverless compute engine for containers.
 
 # Global Infrastructure and Reliability
-High availability and fault tolelance
+High availability and fault tolerance
 
 ## Regions
 A Region is a geographical area that contains AWS resources
 
-- Constraints: Latency, Compliance (Govergance regulation, legal requirements), feature availability, princing
+- Constraints: Latency, Compliance (Governance regulation, legal requirements), feature availability, printing
 
 ##  Availability Zone
 A single data center or group of data centers within a Region.
@@ -77,13 +77,13 @@ Service that enables you to run infrastructure in a hybrid cloud approach.
  Is a web-based interface for accessing and managing AWS services.
 
 ## AWS CLI
-Make API calls using terminal to provision resources on AWS
+Make API calls using a terminal to provision resources on AWS
 
 ## AWS SDKs
 Interact with AWS resources through programming languages
 
 ## AWS Elastic Beanstalk
-User provide code and configuration settings, and Elastic Beanstalk deploys the resources necessary to perform the following tasks:
+The user provide code and configuration settings, and Elastic Beanstalk deploys the resources necessary to perform the following tasks:
 
 - Adjust capacity
 - Load balancing
@@ -102,7 +102,7 @@ Amazon VPC enables you to provision an isolated section of the AWS Cloud. In thi
 To allow public traffic from the internet to access your VPC, you attach an internet gateway to the VPC.
 
 ## Virtual Private Gateway
-Allow create a VPN between a on premise or internal corporate network with a private network (VPC) to access private resources into the VPC.
+Allow create a VPN between a on-premise or internal corporate network with a private network (VPC) to access private resources into the VPC.
 
 - A virtual private gateway allows traffic into the VPC only if it is coming from an approved network.
 
@@ -122,10 +122,10 @@ A subnet is a section of a VPC in which you can group resources based on securit
 A network ACL is a virtual firewall that controls inbound and outbound traffic at the subnet level.
 - Stateless packet filtering: Network ACLs perform stateless packet filtering. They remember nothing and check packets that cross the subnet border each way: inbound and outbound.
 ### Security groups
-Virtual firewall that controls inbound and outbound traffic for an Amazon EC2 instance.
+The virtual firewall that controls inbound and outbound traffic for an Amazon EC2 instance.
 
-- Stateful packet filtering: Security groups perform stateful packet filtering. They remember previous decisions made for incoming packets and deny aall inbound traffic by default.
-- Multiple Amazon EC2 instances within the same VPC, can be associate  with the same security group or use different security groups for each instance. 
+- Stateful packet filtering: Security groups perform stateful packet filtering. They remember previous decisions made for incoming packets and deny all inbound traffic by default.
+- Multiple Amazon EC2 instances within the same VPC, can be associated  with the same security group or use different security groups for each instance. 
 
 ## Domain Name System (DNS)
 Suppose that AnyCompany has a website hosted in the AWS Cloud. Customers enter the web address into their browser, and they are able to access the website. This happens because of Domain Name System (DNS) resolution. DNS resolution involves a customer DNS resolver communicating with a company DNS server.
@@ -136,13 +136,13 @@ It's a DNS web service. It gives developers and businesses a reliable way to rou
 # Storage and Databases
 
 ## Instance stores
-An instance store provides temporary block-level storage for an Amazon EC2 instance. It's physically attached to the host computer for an EC2 instance, and therefore has the same lifespan as the instance.
+An instance store provides temporary block-level storage for an Amazon EC2 instance. It's physically attached to the host computer for an EC2 instance and therefore has the same lifespan as the instance.
 
 ## Amazon Elastic Block Store (Amazon EBS)
 It's a service that provides persisted block-level storage volumes that you can use with Amazon EC2 instances.
 
 
-- Block Storage: In block storage, the object has delta, which make then in small peaces of blocks.
+- Block Storage: In block storage, the object has a delta, which makes then in small pieces of blocks.
 
 - EBS volumes store data within a single Availability Zone
 
@@ -178,11 +178,11 @@ Amazon Simple Storage Service (Amazon S3)(opens in a new tab) is a service that 
 - Low-cost storage designed for data archiving
 - Able to retrieve objects within a few minutes to hours
 
-### S3 Gracier Deep Archive
+### S3 Glacier Deep Archive
 - Lowest-cost object storage class ideal for archiving
 - Able to retrieve objects within 12 hours
 
-### S3 Outpots
+### S3 Outputs
 - Creates S3 buckets on Amazon S3 Outposts
 - Makes it easier to retrieve, store, and access data on AWS Outposts
 
@@ -213,7 +213,7 @@ It is a graph database service.
 ## amazon Quantum Ledger Database (Amazon QLDB)
 It's a ledger database service. You can use Amazon QLDB to review a complete history of all the changes that have been made to your application data.
 
-## Amaozn Managed Blockchain
+## Amazon Managed Blockchain
 It is a service that you can use to create and manage blockchain networks with open-source frameworks. 
 
 ## Amazon ElastiCache
@@ -249,7 +249,7 @@ An IAM group is a collection of IAM users. When you assign an IAM policy to a gr
 ### IAM roles
 An IAM role is an identity that you can assume to gain temporary access to permissions.  
 
-Before an IAM user, application, or service can assume an IAM role, they must be granted permissions to switch to the role. When someone assumes an IAM role, they abandon all previous permissions that they had under a previous role and assume the permissions of the new role. 
+Before an IAM user, application, or service can assume an IAM role, they must be granted permission to switch to the role. When someone assumes an IAM role, they abandon all previous permissions that they had under a previous role and assume the permissions of the new role. 
 
 - Best practice
 IAM roles are ideal for situations in which access to services or resources needs to be granted temporarily, instead of long-term.  
@@ -266,7 +266,7 @@ In AWS Organizations, you can centrally control permissions for the accounts in 
 - Organizational units
 In AWS Organizations, you can group accounts into organizational units (OUs) to make it easier to manage accounts with similar business or security requirements. When you apply a policy to an OU, all the accounts in the OU automatically inherit the permissions specified in the policy.  
 
-- It can apply service control policies (SCPs) to the organization root, an individual member account, or an OU.
+- It can apply service control policies (SCPs) to the organization's root, an individual member account, or an OU.
 
 ## Compliance
 ### AWS Artifact
@@ -321,7 +321,7 @@ CloudWatch uses metrics to represent the data points for your resources. AWS ser
 This feature enables you to access all the metrics for your resources from a single location.
 
 ## AWS CloudTrail
-It records API calls for your account and automatically detect unusual account activity 
+It records API calls for your account and automatically detects unusual account activity 
 
 ### CloudTrail Insights
 This optional feature allows CloudTrail to automatically detect unusual API activities in your AWS account and filter logs to assist with operational analysis and troubleshooting
