@@ -1,4 +1,13 @@
-# Intro to AWS Web Services
+- [Introdution to AWS Web Services](#introdution-to-aws-web-services)
+- [Compute in the cloud](#compute-in-the-cloud)
+- [Global Infrastructure and Reliability](#global-infrastructure-and-reliability)
+- [Networking](#networking)
+- [Storage and Databases](#storage-and-databases)
+- [Security](#security)
+- [Monitoring and Analytics](#monitoring-and-analytics)
+- [Pricing and supporting](#pricing-and-supporting)
+
+# Introdution to AWS Web Services
 ## Intro 
 - Amazon Elastic Compute Cloud (Amazon EC2): It is the server side of a client/server application, a type of virtual server.
 - Pay for what you need
@@ -72,17 +81,18 @@ Amazon CloudFront is a content delivery service. It uses a network of edge locat
 ## AWS Outposts
 Service that enables you to run infrastructure in a hybrid cloud approach.
 
-# Provision AWS Resources
-## AWS Management Console
+
+## Provision AWS Resources
+### AWS Management Console
  Is a web-based interface for accessing and managing AWS services.
 
-## AWS CLI
+### AWS CLI
 Make API calls using a terminal to provision resources on AWS
 
-## AWS SDKs
+### AWS SDKs
 Interact with AWS resources through programming languages
 
-## AWS Elastic Beanstalk
+### AWS Elastic Beanstalk
 The user provide code and configuration settings, and Elastic Beanstalk deploys the resources necessary to perform the following tasks:
 
 - Adjust capacity
@@ -90,7 +100,7 @@ The user provide code and configuration settings, and Elastic Beanstalk deploys 
 - Automatic scaling
 - Application health monitoring
 
-## AWS CloudFormation
+### AWS CloudFormation
 Treat your infrastructure as code. This means that you can build an environment by writing lines of code instead of using the AWS Management Console to individually provision resources.
 
 # Networking
@@ -308,9 +318,9 @@ It checks applications for security vulnerabilities and deviations from security
 ## Amazon GuardDuty
 It is a service that provides intelligent threat detection for your AWS infrastructure and resources. It identifies threats by continuously monitoring the network activity and account behavior within your AWS environment.
 
-## Monitoring and Analytics
+# Monitoring and Analytics
 
-### Amazon CloudWatch
+## Amazon CloudWatch
 It is a web service that enables you to monitor and manage various metrics and configure alarm actions based on data from those metrics.
 
 CloudWatch uses metrics to represent the data points for your resources. AWS services send metrics to CloudWatch. CloudWatch then uses these metrics to create graphs automatically that show how performance has changed over time. 
@@ -329,16 +339,30 @@ This optional feature allows CloudTrail to automatically detect unusual API acti
 ##  AWS Trusted Advisor
 AWS Trusted Advisor(opens in a new tab) is a web service that inspects your AWS environment and provides real-time recommendations in accordance with AWS best practices. Trusted Advisor compares its findings to AWS best practices in five categories: cost optimization, performance, security, fault tolerance, and service limits
 
-## Pricing and supporting
+# Pricing and supporting
 
-### AWS Free Tier
+## AWS Free Tier
 It enables you to begin using certain services without having to worry about incurring costs for the specified period
 Three types of offers are available: 
 - Always Free
 - 12 Months Free
 - Trials
 
-### AWS Billing & Cost Management dashboard
+## AWS Billing & Cost Management dashboard
 Use it to pay your AWS bill, monitor your usage, and analyze and control your costs.
 
 Compare your current month-to-date balance with the previous month, and get a forecast of the next month based on current usage.
+
+## Consolidated billing
+In an earlier module, you learned about AWS Organizations, a service that enables you to manage multiple AWS accounts from a central location. AWS Organizations also provides the option for consolidated billing.
+
+The consolidated billing feature of AWS Organizations enables you to receive a single bill for all AWS accounts in your organization. By consolidating, you can easily track the combined costs of all the linked accounts in your organization. 
+
+>The default maximum number of accounts allowed for an organization is 4, but you can contact AWS Support to increase your quota, if needed.
+
+## AWS Budgets
+Create budgets to plan your service usage, service costs, and instance reservations. The information in AWS Budgets updates three times a day. This helps you to accurately determine how close your usage is to your budgeted amounts or to the AWS Free Tier limits.
+
+> In AWS Budgets, you can also set custom alerts when your usage exceeds (or is forecasted to exceed) the budgeted amount.
+
+## AWS Cost Explorer
