@@ -6,6 +6,8 @@
 - [Security](#security)
 - [Monitoring and Analytics](#monitoring-and-analytics)
 - [Pricing and supporting](#pricing-and-supporting)
+- [Migration and Innovation](#migration-and-innovation)
+- [The Cloud Journey](#the-cloud-journey)
 
 # Introdution to AWS Web Services
 ## Intro 
@@ -366,3 +368,159 @@ Create budgets to plan your service usage, service costs, and instance reservati
 > In AWS Budgets, you can also set custom alerts when your usage exceeds (or is forecasted to exceed) the budgeted amount.
 
 ## AWS Cost Explorer
+It's a tool that lets you visualize, understand, and manage your AWS costs and usage over time.
+AWS Support
+
+## AWS Support
+AWS offers four different Support plans to help you troubleshoot issues, lower costs, and efficiently use AWS services. 
+
+- Basic
+It's free for all AWS customers. It includes access to whitepapers, documentation, and support communities. With Basic Support, you can also contact AWS for billing questions and service limit increases.
+
+- Developer
+Customers in the Developer Support plan have access to features such as:
+  - Best practice guidance
+  - Client-side diagnostic tools
+  - Building-block architecture support, which consists of guidance for how to use AWS offerings, features, and services together
+
+- Business
+Customers with a Business Support plan have access to additional features, including: 
+  - Use-case guidance to identify AWS offerings, features, and services that can best support your specific needs
+  - All AWS Trusted Advisor checks
+  - Limited support for third-party software, such as common operating systems and application stack components
+
+- Enterprise On-Ramp
+  - A pool of Technical Account Managers to provide proactive guidance and coordinate access to programs and AWS experts
+  - A Cost Optimization workshop (one per year)
+  - A Concierge support team for billing and account assistance
+  - Tools to monitor costs and performance through Trusted Advisor and Health API/Dashboard
+
+- Enterprise
+  - Consultative review and architecture guidance
+  - Infrastructure Event Management support
+  - Cost Optimization Workshop and tools
+  - Support automation workflows
+  - 15 minutes or less response time for business-critical issues
+
+## Technical Account Manager (TAM)
+The Enterprise On-Ramp and Enterprise Support plans include access to a Technical Account Manager (TAM).
+
+> The TAM is your primary point of contact at AWS. If your company subscribes to Enterprise Support or Enterprise On-Ramp, your TAM educates, empowers, and evolves your cloud journey across the full range of AWS services.
+
+## AWS Marketplace
+It's a digital catalog that includes thousands of software listings from independent software vendors. You can use AWS Marketplace to find, test, and buy software that runs on AWS.
+
+> AWS Marketplace offers products in several categories, such as Infrastructure Software, DevOps, Data Products, Professional Services, Business Applications, Machine Learning, Industries, and Internet of Things (IoT).
+
+# Migration and Innovation
+## AWS Cloud Adoption Framework
+It organizes guidance into six areas of focus, called Perspectives. Each Perspective addresses distinct responsibilities. The planning process helps the right people across the organization prepare for the changes ahead.
+
+In general, the **Business**, **People**, and **Governance Perspectives** focus on business capabilities, whereas the **Platform**, **Security**, and **Operations Perspectives** focus on technical capabilities.
+
+- Business
+Ensures that IT aligns with business needs and that IT investments link to key business results.
+Common roles in the Business Perspective include: 
+  - Business managers
+  - Finance managers
+  - Budget owners
+  - Strategy stakeholders
+
+- People
+Supports development of an organization-wide change management strategy for successful cloud adoption.
+Common roles in the People Perspective include: 
+  - Human resources
+  - Staffing
+  - People managers
+
+- Governance Perspective
+Focuses on the skills and processes to align IT strategy with business strategy. This ensures that you maximize the business value and minimize risks.
+Common roles in the Governance Perspective include: 
+  - Chief Information Officer (CIO)
+  - Program managers
+  - Enterprise architects
+  - Business analysts
+  - Portfolio managers
+
+- Platform
+Includes principles and patterns for implementing new solutions on the cloud, and migrating on-premises workloads to the cloud.
+Common roles in the Platform Perspective include: 
+  - Chief Technology Officer (CTO)
+  - IT managers
+  - Solutions architects
+
+- Security
+Ensures that the organization meets security objectives for visibility, auditability, control, and agility. 
+Common roles in the Security Perspective include: 
+  - Chief Information Security Officer (CISO)
+  - IT security managers
+  - IT security analysts
+
+- Operations
+Helps you to enable, run, use, operate, and recover IT workloads to the level agreed upon with your business stakeholders.
+Common roles in the Operations Perspective include: 
+  - IT operations managers
+  - IT support managers
+
+## 6 R's of migration
+When migrating applications to the cloud, six of the most common migration strategies that you can implement are:
+
+- Rehosting
+Also known as “lift-and-shift” involves moving applications without changes
+
+- Replatforming
+Also known as “lift, tinker, and shift,” involves making a few cloud optimizations to realize a tangible benefit. Optimization is achieved without changing the core architecture of the application.
+
+- Refactoring/re-architecting
+Involves reimagining how an application is architected and developed by using cloud-native features. Refactoring is driven by a strong business need to add features, scale, or performance that would otherwise be difficult to achieve in the application’s existing environment.
+
+- Repurchasing
+Involves moving from a traditional license to a software-as-a-service model. 
+
+- Retaining
+Consists of keeping applications that are critical for the business in the source environment. This might include applications that require major refactoring before they can be migrated, or, work that can be postponed until a later time.
+
+- Retiring
+It's the process of removing applications that are no longer needed.
+
+## AWS Snow Family
+It's a collection of physical devices that help to physically transport up to exabytes of data into and out of AWS. 
+
+# The Cloud Journey
+## AWS Well-Architected Framework
+Helps you understand how to design and operate reliable, secure, efficient, and cost-effective systems in the AWS Cloud. It provides a way for you to consistently measure your architecture against best practices and design principles and identify areas for improvement.
+
+The Well-Architected Framework is based on six pillars: 
+- Operational excellence
+It is the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures.  
+
+- Security
+The Security pillar is the ability to protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies. 
+
+- Reliability
+Reliability is the ability of a system to do the following:
+  - Recover from infrastructure or service disruptions
+  - Dynamically acquire computing resources to meet demand
+  - Mitigate disruptions such as misconfigurations or transient network issues
+Reliability includes testing recovery procedures, scaling horizontally to increase aggregate system availability, and automatically recovering from failure.
+
+- Performance efficiency
+It is the ability to use computing resources efficiently to meet system requirements and to maintain that efficiency as demand changes and technologies evolve. 
+
+- Cost optimization
+It is the ability to run systems to deliver business value at the lowest price point. 
+
+- Sustainability
+Sustainability is the ability to continually improve sustainability impacts by reducing energy consumption and increasing efficiency across all components of a workload by maximizing the benefits from the provisioned resources and minimizing the total resources required.
+
+## Advantages of cloud computing
+perating in the AWS Cloud offers many benefits over computing in on-premises or hybrid environments. 
+
+In this section, you will learn about six advantages of cloud computing:
+
+- Trade upfront expense for variable expense.
+- Benefit from massive economies of scale.
+- Stop guessing capacity.
+- Increase speed and agility.
+- Stop spending money running and maintaining data centers.
+- Go global in minutes.
