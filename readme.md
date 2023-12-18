@@ -133,144 +133,215 @@ A subnet is a section of a VPC in which you can group resources based on securit
 ### Network access control list (ACL)
 A network ACL is a virtual firewall that controls inbound and outbound traffic at the subnet level.
 - Stateless packet filtering: Network ACLs perform stateless packet filtering. They remember nothing and check packets that cross the subnet border each way: inbound and outbound.
+
 ### Security groups
 The virtual firewall that controls inbound and outbound traffic for an Amazon EC2 instance.
 
 - Stateful packet filtering: Security groups perform stateful packet filtering. They remember previous decisions made for incoming packets and deny all inbound traffic by default.
-- Multiple Amazon EC2 instances within the same VPC, can be associated  with the same security group or use different security groups for each instance. 
-
-## Domain Name System (DNS)
-Suppose that AnyCompany has a website hosted in the AWS Cloud. Customers enter the web address into their browser, and they are able to access the website. This happens because of Domain Name System (DNS) resolution. DNS resolution involves a customer DNS resolver communicating with a company DNS server.
+- Multiple Amazon EC2 instances within the same VPC, can be associated with the same security group or use different security groups for each instance. 
 
 ## Route 53
-It's a DNS web service. It gives developers and businesses a reliable way to route end users to internet applications hosted in AWS. 
+Suppose that AnyCompany has a website hosted in the AWS Cloud. Customers enter the web address into their browser, and they are able to access the website. This happens because of **Domain Name System (DNS)** resolution. DNS resolution involves a customer DNS resolver communicating with a company DNS server.
+
+**Route 53** It's a DNS web service. It gives developers and businesses a reliable way to route end users to internet applications hosted in AWS. 
 
 # Storage and Databases
 
-## Instance stores
-An instance store provides temporary block-level storage for an Amazon EC2 instance. It's physically attached to the host computer for an EC2 instance and therefore has the same lifespan as the instance.
+## Storage
 
-## Amazon Elastic Block Store (Amazon EBS)
-It's a service that provides persisted block-level storage volumes that you can use with Amazon EC2 instances.
+- Block
+  - Used for high perfromance workloads
+  - Attachek to the hard disk of the EC2 instance
+  - It can be used by two type of services: Instance Store and EBS
 
+- Object
+  - It can be used by two type of services: S3
 
-- Block Storage: In block storage, the object has a delta, which makes then in small pieces of blocks.
+- File
+  - Shared volume file storage across the services in the network
+  - It can be used by two type of services: EFS, FSx(windows)
 
-- EBS volumes store data within a single Availability Zone
+### Instance stores
+Some Amazon EC2 instance types come with a form of directly attached, block-device storage known as an instance store. Use the instance store for temporary storage. Data that's stored in instance store volumes isn't persistent through instance stops, terminations, or hardware failures.
 
-## Amazon Simple Storage Service (S3)
-Amazon Simple Storage Service (Amazon S3)(opens in a new tab) is a service that provides object-level storage. Amazon S3 stores data as objects in buckets.
+### Amazon Elastic Block Store (Amazon EBS)
+It provides block-level storage volumes for Amazon EC2 instances. If a person stops or terminates an Amazon EC2 instance, all the data on the attached EBS volume remains available.
 
-- Object Storage: In object storage, each object consists of data, metadata, and a key. The data might be an image, video, text document, or any other type of file.
+> Block Storage: In block storage, the object has a delta, which makes then in small pieces of blocks.
 
-### S3 Standard
-- Designed for frequently accessed data
-- Stores data in a minimum of three Availability Zones
+> EBS volumes store data within a single Availability Zone
 
-### S3 Standard Infrequent Access (S3 Standard IA)
-- Ideal for data that is infrequently accessed;
-- Ideal for data that requires high availability when needed
-- Both S3 Standard and S3 Standard-IA store data in a minimum of three Availability Zones. 
-- S3 Standard-IA provides the same level of availability as S3 Standard but at a lower storage price.
-
-### S3 One Zone-IA
-- Stores data in a single Availability Zone
-- Has a lower storage price than Amazon S3 Standard-IA
-
-### S3 Intelligent Tiering 
-- Ideal for data with unknown or changing access patterns
-- Requires a small monthly monitoring and automation fee per object
-- If you haven’t accessed an object for 30 consecutive days, Amazon S3 automatically moves it to the infrequent access tier, S3 Standard-IA. If you access an object in the infrequent access tier, S3 automatically moves it to the frequent access tier, S3 Standard.
-
-### S3 Glacier Instant Retrieval
-- Works well for archived data that requires immediate access
-- Can retrieve objects within a few milliseconds
-
-### S3 Glacier Flexible Retrieval
-- Low-cost storage designed for data archiving
-- Able to retrieve objects within a few minutes to hours
-
-### S3 Glacier Deep Archive
-- Lowest-cost object storage class ideal for archiving
-- Able to retrieve objects within 12 hours
-
-### S3 Outputs
-- Creates S3 buckets on Amazon S3 Outposts
-- Makes it easier to retrieve, store, and access data on AWS Outposts
-
-## Amazon Elastic File system (Amazon EFS)
+### Amazon Elastic File system (Amazon EFS)
 Is a scalable file system used with AWS Cloud services and on-premises resources. As you add and remove files, Amazon EFS grows and shrinks automatically. It can scale on demand to petabytes without disrupting applications. 
 
-- Data in an Amazon EFS file system can be accessed concurrently from all the Availability Zones in the Region where the file system is located
+- Data in an Amazon EFS file system can be accessed concurrently from all the Availability Zones in the Region where the file system is located.
 
-## Amazon Relational Database Service (Amazon RDS)
+### Amazon Simple Storage Service (S3)
+It's a service that provides object-level storage. Amazon S3 stores data as objects in buckets.
+
+> Object Storage: In object storage, each object consists of data, metadata, and a key. The data might be an image, video, text document, or any other type of file.
+
+#### Types
+- S3 Standard
+  - Designed for frequently accessed data
+  - Stores data in a minimum of three Availability Zones
+
+- S3 Standard Infrequent Access (S3 Standard IA)
+  - Ideal for data that is infrequently accessed;
+  - Ideal for data that requires high availability when needed
+  - Both S3 Standard and S3 Standard-IA store data in a minimum of three Availability Zones. 
+  - S3 Standard-IA provides the same level of availability as S3 Standard but at a lower storage price.
+
+- S3 One Zone-IA
+  - Stores data in a single Availability Zone
+  - Has a lower storage price than Amazon S3 Standard-IA
+
+- S3 Intelligent Tiering 
+  - Ideal for data with unknown or changing access patterns
+  - Requires a small monthly monitoring and automation fee per object
+  - If you haven’t accessed an object for 30 consecutive days, Amazon S3 automatically moves it to the infrequent access tier, S3 Standard-IA. If you access an object in the infrequent access tier, S3 automatically moves it to the frequent access tier, S3 Standard.
+
+- S3 Glacier Instant Retrieval
+  - Works well for archived data that requires immediate access
+  - Can retrieve objects within a few milliseconds
+
+- S3 Glacier Flexible Retrieval
+  - Low-cost storage designed for data archiving
+  - Able to retrieve objects within a few minutes to hours
+
+- S3 Glacier Deep Archive
+  - Lowest-cost object storage class ideal for archiving
+  - Able to retrieve objects within 12 hours
+
+- S3 Outputs
+  - Creates S3 buckets on Amazon S3 Outposts
+  - Makes it easier to retrieve, store, and access data on AWS Outposts
+
+## Database
+
+### Types
+- Relational
+  - Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), e-commerce
+  - Amazon Aurora, Amazon RDS, Amazon Redshift
+- Key-value 
+  - High-traffic web applications, e-commerce systems, gaming applications
+  - Amazon DynamoDB
+- In-memory 
+  - Caching, session management, gaming leaderboards, geospatial applications
+  - Amazon ElastiCache, Amazon MemoryDB for Redis
+- Document
+  - Content management, catalogs, user profiles
+  - Amazon DocumentDB (with MongoDB compatibility)
+- Wide column
+  - High-scale industrial apps for equipment maintenance, fleet management, route optimization
+  - Amazon Keyspaces
+- Graph
+  - Fraud detection, social networking, recommendation engines
+  - Amazon Neptune
+- Time series
+  - Internet of Things (IoT) applications, DevOps, industrial telemetry
+  - Amazon Timestream
+- Ledger
+  - Systems of record, supply chain, registrations, banking transactions
+  - Amazon Ledger Database Services (QLDB)
+
+
+### Relational database
+
+- **Amazon Aurora**
+MySQL and PostgreSQL-compatible relational database built in the cloud for the cloud. It can run the database with multi-Regional replicas.
+
+- **Amazon Relational Database Service (Amazon RDS)**
 It's a service that enables you to run relational databases in the AWS Cloud.
 
-## Amazon DynamoDB
-It's a key-value database service. It delivers single-digit millisecond performance at any scale.
- - DynamoDB is serverless, which means that you do not have to provision, patch, or manage servers. 
-
-## Amazon Redshift
+- **Amazon Redshift**
 It's a data warehousing service that you can use for big data analytics. It offers the ability to collect data from many sources and helps you to understand relationships and trends across your data.
 
-## Amazon Database Migration Service (Amazon DMS)
+- **Amazon Database Migration Service (Amazon DMS)**
 It enables you to migrate relational databases, nonrelational databases, and other types of data stores.
+Key-value database
 
-## Amazon DocumentDB
-Amazon DocumentDB(opens in a new tab) is a document database service that supports MongoDB workloads. (MongoDB is a document database program.)
+### Key-value database
 
-## Amazon Neptune
-It is a graph database service. 
+- **Amazon DynamoDB**
+It's a key-value database service. It delivers single-digit millisecond performance at any scale.
+  > DynamoDB is serverless, which means that you do not have to provision, patch, or manage servers. 
 
-## amazon Quantum Ledger Database (Amazon QLDB)
-It's a ledger database service. You can use Amazon QLDB to review a complete history of all the changes that have been made to your application data.
+### In-memory database
 
-## Amazon Managed Blockchain
-It is a service that you can use to create and manage blockchain networks with open-source frameworks. 
-
-## Amazon ElastiCache
+- **Amazon ElastiCache**
 It is a service that adds caching layers on top of your databases to help improve the read times of common requests. 
 - It supports two types of data stores: Redis and Memcached.
 
-## Amazon DynamoDB Accelerator
-Amazon DynamoDB Accelerator (DAX)(opens in a new tab) is an in-memory cache for DynamoDB. 
+- **Amazon DynamoDB Accelerator**
+Amazon DynamoDB Accelerator (DAX) is an in-memory cache for DynamoDB. 
 - It helps improve response times from single-digit milliseconds to microseconds.
 
+### Document database
+
+- **Amazon DocumentDB**
+Amazon DocumentDB is a document database service that supports MongoDB workloads. (MongoDB is a document database program.)
+
+### Graph database
+
+- **Amazon Neptune**
+It is a graph database service. 
+
+### Time Series database
+
+- **Amazon Timestream**
+Fast, Scalable, Store and analyze trillions of events per day
+
+### Ledger database
+- **Amazon Quantum Ledger Database (Amazon QLDB)**
+It's a ledger database service. You can use Amazon QLDB to review a complete history of all the changes that have been made to your application data.
+
+### Blockchain database
+- **Amazon Managed Blockchain**
+It is a service that you can use to create and manage blockchain networks with open-source frameworks. 
+
 # Security
+
+## The shared responsibility model
+- AWS responsibility "Security of the Cloud": AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud. This infrastructure is composed of the hardware, software, networking, and all of the physical and environmental controls that run AWS Cloud services.
+
+- Customer responsibility "Security in the Cloud": Customer responsibility will be determined by the AWS Cloud services that a customer selects, sush as:
+  - Platform, applications, and identity and access management;
+  - Operating system, network, and firewall configuration;
+  - Client-side data encryption and data integrity authentication;
+  - Server-side encryption (File system and data)
+  - Network traffic protection (Encryption, integrity, and identity)
 
 ## AWS Identity and Access Management (IAM)
 It enables you to manage access to AWS services and resources securely.
 
-### AWS account root user
-When you first create an AWS account, you begin with an identity known as the root user.  It has complete access to all the AWS services and resources in the account.
+- **AWS account root user**
+When you first create an AWS account, you begin with an identity known as the root user. It has complete access to all the AWS services and resources in the account.
 
-### IAM users
+- **IAM users**
 An IAM user is an identity that you create in AWS. It represents the person or application that interacts with AWS services and resources. It consists of a name and credentials.
+  > By default, when you create a new IAM user in AWS, it has no permissions associated with it. To allow the IAM user to perform specific actions in AWS, such as launching an Amazon EC2 instance or creating an Amazon S3 bucket, you must grant the IAM user the necessary permissions.
 
-- By default, when you create a new IAM user in AWS, it has no permissions associated with it. To allow the IAM user to perform specific actions in AWS, such as launching an Amazon EC2 instance or creating an Amazon S3 bucket, you must grant the IAM user the necessary permissions.
-
-### IAM policies
+- **IAM policies**
 An IAM policy is a document that allows or denies permissions to AWS services and resources.  
-
-- Best practices
+  > **Best practices**
 Follow the security principle of least privilege when granting permissions. By following this principle, you help to prevent users or roles from having more permissions than needed to perform their tasks. 
 
-### IAM groups
+- **IAM groups**
 An IAM group is a collection of IAM users. When you assign an IAM policy to a group, all users in the group are granted permissions specified by the policy.
 
-### IAM roles
+- **IAM roles**
 An IAM role is an identity that you can assume to gain temporary access to permissions.  
+  - Before an IAM user, application, or service can assume an IAM role, they must be granted permission to switch to the role. When someone assumes an IAM role, they abandon all previous permissions that they had under a previous role and assume the permissions of the new role. 
 
-Before an IAM user, application, or service can assume an IAM role, they must be granted permission to switch to the role. When someone assumes an IAM role, they abandon all previous permissions that they had under a previous role and assume the permissions of the new role. 
+  > **Best practice**
+  IAM roles are ideal for situations in which access to services or resources needs to be granted temporarily, instead of long-term.  
 
-- Best practice
-IAM roles are ideal for situations in which access to services or resources needs to be granted temporarily, instead of long-term.  
-
-### Multi-factor authentication
+- **Multi-factor authentication**
 You might have needed to provide your password and then a second form of authentication, such as a random code sent to your phone. This is an example of multi-factor authentication(opens in a new tab).
 
 ## AWS Organizations
-Suppose that your company has multiple AWS accounts. You can use AWS Organizations(opens in a new tab) to consolidate and manage multiple AWS accounts within a central location. When you create an organization, AWS Organizations automatically creates a root, which is the parent container for all the accounts in your organization. 
+Suppose that your company has multiple AWS accounts. You can use AWS Organizations to consolidate and manage multiple AWS accounts within a central location. When you create an organization, AWS Organizations automatically creates a root, which is the parent container for all the accounts in your organization. 
 
 - Service Control Policies (SCP) 
 In AWS Organizations, you can centrally control permissions for the accounts in your organization by using service control policies (SCPs). SCPs enable you to place restrictions on the AWS services, resources, and individual API actions that users and roles in each account can access.
@@ -282,7 +353,7 @@ In AWS Organizations, you can group accounts into organizational units (OUs) to 
 
 ## Compliance
 ### AWS Artifact
-AWS Artifact(opens in a new tab) is a service that provides on-demand access to AWS security and compliance reports and select online agreements. AWS Artifact consists of two main sections: AWS Artifact Agreements and AWS Artifact Reports.
+AWS Artifact is a service that provides on-demand access to AWS security and compliance reports and select online agreements. AWS Artifact consists of two main sections: AWS Artifact Agreements and AWS Artifact Reports.
 - AWS Artifact Agreements
 Suppose that your company needs to sign an agreement with AWS regarding your use of certain types of information throughout AWS services
 - AWS Artifact Reports
@@ -339,7 +410,7 @@ It records API calls for your account and automatically detects unusual account 
 This optional feature allows CloudTrail to automatically detect unusual API activities in your AWS account and filter logs to assist with operational analysis and troubleshooting
 
 ##  AWS Trusted Advisor
-AWS Trusted Advisor(opens in a new tab) is a web service that inspects your AWS environment and provides real-time recommendations in accordance with AWS best practices. Trusted Advisor compares its findings to AWS best practices in five categories: cost optimization, performance, security, fault tolerance, and service limits
+AWS Trusted Advisor is a web service that inspects your AWS environment and provides real-time recommendations in accordance with AWS best practices. Trusted Advisor compares its findings to AWS best practices in five categories: cost optimization, performance, security, fault tolerance, and service limits
 
 # Pricing and supporting
 
@@ -491,6 +562,7 @@ It's a collection of physical devices that help to physically transport up to ex
 Helps you understand how to design and operate reliable, secure, efficient, and cost-effective systems in the AWS Cloud. It provides a way for you to consistently measure your architecture against best practices and design principles and identify areas for improvement.
 
 The Well-Architected Framework is based on six pillars: 
+
 - Operational excellence
 It is the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures.  
 
