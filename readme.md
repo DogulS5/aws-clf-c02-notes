@@ -42,6 +42,7 @@ AWS (Amazon Web Services) is a cloud computing platform that offers a wide range
   - Memory-optimized: Memory-optimized instances are ideal for workloads that process large datasets in memory, such as high-performance databases
   - Compute optimized: Compute-optimized instances are better suited for batch processing workloads than general-purpose instances.
   - Storage optimized: Storage instances are designed for workloads requiring high, sequential read and write access to large datasets on local storage.
+  
 - Contract types:
   - Amazon EC2 Reserved instance: Amazon EC2 Reserved Instances (RI) provide a significant discount (up to 72%) compared to On-Demand pricing and a capacity reservation when used in a specific Availability Zone.
   - Amazon EC2 On-Demand: Let you pay for computing capacity by the hour or second with no long-term commitments.
