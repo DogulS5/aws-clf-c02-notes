@@ -10,16 +10,25 @@
 - [The Cloud Journey](#the-cloud-journey)
 
 # Introdution to AWS Web Services
-## Intro 
-- Amazon Elastic Compute Cloud (Amazon EC2): It is the server side of a client/server application, a type of virtual server.
-- Pay for what you need
 
-## Cloud computing
-- The on-demand delivery (resources that a customer needs) of IT resources over the Internet with pay as you go pricing (pay based on necessity)
+## Cloud Computing
+The on-demand delivery (resources that a customer needs) of IT resources over the Internet with pay as you go pricing (pay based on necessity)
 
-# Compute in the cloud
-## Intro
-- Multitenancy: Sharing underlying hardware between virtual machines. Hypervisor manager multi tenancies which is manage by AWS
+## Advantages of cloud computing
+Operating in the AWS Cloud offers many benefits over computing in on-premises or hybrid environments. 
+
+Bellow six advantages of cloud computing:
+- Trade upfront expense for variable expense.
+- Benefit from massive economies of scale.
+- Stop guessing capacity.
+- Increase speed and agility.
+- Stop spending money running and maintaining data centers.
+- Go global in minutes.
+
+## AWS Web Services
+AWS (Amazon Web Services) is a cloud computing platform that offers a wide range of services including computing power, storage, database, machine learning, and more. It provides a secure, scalable, and cost-effective infrastructure for businesses to build and deploy applications.
+
+> **Multitenancy**: Sharing underlying hardware between virtual machines. Hypervisor manager multi tenancies which is manage by AWS
 
 ## Amazon EC2:
 - Handle: 
@@ -440,7 +449,6 @@ Create budgets to plan your service usage, service costs, and instance reservati
 
 ## AWS Cost Explorer
 It's a tool that lets you visualize, understand, and manage your AWS costs and usage over time.
-AWS Support
 
 ## AWS Support
 AWS offers four different Support plans to help you troubleshoot issues, lower costs, and efficiently use AWS services. 
@@ -577,22 +585,10 @@ Reliability is the ability of a system to do the following:
 Reliability includes testing recovery procedures, scaling horizontally to increase aggregate system availability, and automatically recovering from failure.
 
 - Performance efficiency
-It is the ability to use computing resources efficiently to meet system requirements and to maintain that efficiency as demand changes and technologies evolve. 
+It's the ability to use computing resources efficiently to meet system requirements and to maintain that efficiency as demand changes and technologies evolve. 
 
 - Cost optimization
 It is the ability to run systems to deliver business value at the lowest price point. 
 
 - Sustainability
 Sustainability is the ability to continually improve sustainability impacts by reducing energy consumption and increasing efficiency across all components of a workload by maximizing the benefits from the provisioned resources and minimizing the total resources required.
-
-## Advantages of cloud computing
-perating in the AWS Cloud offers many benefits over computing in on-premises or hybrid environments. 
-
-In this section, you will learn about six advantages of cloud computing:
-
-- Trade upfront expense for variable expense.
-- Benefit from massive economies of scale.
-- Stop guessing capacity.
-- Increase speed and agility.
-- Stop spending money running and maintaining data centers.
-- Go global in minutes.
