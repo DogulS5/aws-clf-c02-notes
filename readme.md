@@ -573,23 +573,43 @@ Helps you understand how to design and operate reliable, secure, efficient, and 
 The Well-Architected Framework is based on six pillars: 
 
 - Operational excellence
-It is the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures.  
+It is the ability to run and monitor systems to deliver business value and to continually improve supporting processes and procedures.
+• Automate changes
+• Respond to events
+• Define standards to manage daily operations
+Manual intervention as a risk
 
-- Security
-The Security pillar is the ability to protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies. 
+- Security (Security is critical)
+The Security pillar is the ability to protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies.
+• Confidentiality and integrity of data
+• Managing user permissions
+• Establishing controls to detect security events
 
-- Reliability
-Reliability is the ability of a system to do the following:
-  - Recover from infrastructure or service disruptions
-  - Dynamically acquire computing resources to meet demand
-  - Mitigate disruptions such as misconfigurations or transient network issues
+- Reliability (Systems fail)
+Build architectures with strong foundations, resilient architecture, consistent change management, and proven failure recovery processes
+• Distributed systems design
+• Recovery planning
+• Adapting to changing requirements
 Reliability includes testing recovery procedures, scaling horizontally to increase aggregate system availability, and automatically recovering from failure.
 
 - Performance efficiency
-It's the ability to use computing resources efficiently to meet system requirements and to maintain that efficiency as demand changes and technologies evolve. 
+It's the ability to use computing resources efficiently to meet system requirements and to maintain that efficiency as demand changes and technologies evolve.
+• Selecting resource types and sizes optimized for workload requirements
+• Monitoring performance of services and workloads
+• Maintaining efficiency as business needs and technologies evolve
+Performance levels over time
 
 - Cost optimization
-It is the ability to run systems to deliver business value at the lowest price point. 
+It is the ability to run systems to deliver business value at the lowest price point.
+• Understanding spend over time
+• Controlling fund allocation
+• Selecting resources of right type and quantity
+• Scaling to meet business needs without overspending
+Meet requirements without exceeding budgets
 
 - Sustainability
 Sustainability is the ability to continually improve sustainability impacts by reducing energy consumption and increasing efficiency across all components of a workload by maximizing the benefits from the provisioned resources and minimizing the total resources required.
+• Shared responsibility model for Sustainability
+• Understanding impact of cloud usage
+• Maximizing utilization to minimize required resources (and reduce downstream impacts)
+Decreasing your own footprint through architecture design
