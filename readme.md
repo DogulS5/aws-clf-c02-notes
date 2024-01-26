@@ -227,12 +227,14 @@ It's a service that provides object-level storage. Amazon S3 stores data as obje
   - Creates S3 buckets on Amazon S3 Outposts
   - Makes it easier to retrieve, store, and access data on AWS Outposts
  
+## AWS Snowball Family
 ## AWS Snowball Edge
 Snowball Edge is a type of Snowball device with on-board storage and compute power for select AWS capabilities. Snowball Edge can do local processing and edge-computing workloads in addition to transferring data between your local environment and the AWS Cloud
 - Storage Optimized
 - Compute Optimized
 - Compute Optimized with GPU
-- Import virtual tapes 
+- Import virtual tapes
+## AWS Snowcone
 
 ## Database
 
