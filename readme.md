@@ -44,7 +44,7 @@ AWS (Amazon Web Services) is a cloud computing platform that offers a wide range
   - Storage optimized: Storage instances are designed for workloads requiring high, sequential read and write access to large datasets on local storage.
   
 - Contract types:
-  - Amazon EC2 Reserved instance: Amazon EC2 Reserved Instances (RI) provide a significant discount (up to 72%) compared to On-Demand pricing and a capacity reservation when used in a specific Availability Zone.
+  - Amazon EC2 Reserved instance: Amazon EC2 Reserved Instances (RI) provide a significant discount (up to 72%) compared to On-Demand pricing and a capacity reservation when used in a specific Availability Zone. Contract for 1 or 3 years.
   - Amazon EC2 On-Demand: Let you pay for computing capacity by the hour or second with no long-term commitments.
   - Amazon EC2 Sopt Instance: Workload does not require a minimum contract length and can withstand interruptions.
   - Amazon EC2 Dedicated Instance: Run in a virtual private cloud (VPC) on hardware that is dedicated to a single customer.
