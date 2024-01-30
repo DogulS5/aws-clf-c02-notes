@@ -320,6 +320,13 @@ It's a ledger database service. You can use Amazon QLDB to review a complete his
 It is a service that you can use to create and manage blockchain networks with open-source frameworks. 
 
 # Security
+- BENEFITS
+-   Scale Securely
+-   Automate Security
+-   Private & Data Security --> Data Flow is encrypter before left the facility --> Encryption in transit (VPC Cross Region Peering and TLS Connections)
+-   Compliance & Security Partners
+-   Prevent & Detect
+-   Respond & Remediate
 
 ## The shared responsibility model
 - AWS responsibility "Security of the Cloud": AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud. This infrastructure is composed of the hardware, software, networking, and all of the physical and environmental controls that run AWS Cloud services.
